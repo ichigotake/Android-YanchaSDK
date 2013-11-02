@@ -1,9 +1,13 @@
 package net.ichigotake.yanchasdk.lib.model;
 
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -21,12 +25,13 @@ public class JoinUserFactory {
      * @throws JSONException
      */
     public static List<String> createNicknameList(String response) throws JSONException {
-        JSONArray json = new JSONArray(response);
+        Log.d("Login", "response: AA " + response);
+        JSONObject json = new JSONObject(response);
         List<String> nicknames = new ArrayList<String>();
 
-        int length = json.length();
-        for (int i=0; i<length; i++) {
-            nicknames.add(json.getString(i));
+        Iterator<String> iter = json.keys();
+        while (iter.hasNext()) {
+            nicknames.add(iter.next().toString());
         }
 
         return nicknames;
