@@ -2,8 +2,6 @@ package net.ichigotake.yanchasdk.lib.model;
 
 import java.util.ArrayList;
 
-import net.ichigotake.yanchasdk.lib.model.PostMessageBuilder.PostMessage;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,14 +9,14 @@ import org.json.JSONObject;
 /**
  * API level 1
  * 
- * {@link PostMessage} ‚ğ¶¬‚·‚é
+ * {@link PostMessage} ã‚’ç”Ÿæˆã™ã‚‹
  */
 public class PostMessageFactory {
 
 	/**
 	 * API level 1
 	 * 
-	 * JSON•¶š—ñ‚©‚ç {@link PostMessage} ‚ğ¶¬‚·‚é
+	 * JSONæ–‡å­—åˆ—ã‹ã‚‰ {@link PostMessage} ã‚’ç”Ÿæˆã™ã‚‹
 	 * 
 	 * @param jsonString
 	 * @return
@@ -31,7 +29,7 @@ public class PostMessageFactory {
 	/**
 	 * API level 1
 	 * 
-	 * {@link JSONObject} ‚©‚ç {@link PostMessage} ‚ğ¶¬‚·‚é
+	 * {@link JSONObject} ã‹ã‚‰ {@link PostMessage} ã‚’ç”Ÿæˆã™ã‚‹
 	 * 
 	 * @param json
 	 * @return
@@ -45,8 +43,8 @@ public class PostMessageFactory {
 			String tag = argsTags.getString(i);
 			tags.add(tag);
 		}
-		
-		PostMessage message = new PostMessageBuilder()
+
+		PostMessage message = new PostMessage.PostMessageBuilder()
 			.setId(json.getInt("id"))
 			.setProfileImageUrl(json.getString("profile_image_url"))
 			.setCreatedTime(json.getLong("created_at_ms"))
