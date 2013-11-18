@@ -6,17 +6,17 @@ import java.util.Map;
 /**
  * API level 1
  * 
- * yancha‚Ìw“Çƒ^ƒOƒŠƒXƒg
+ * ãƒãƒ£ãƒƒãƒˆã§è³¼èª­ã—ã¦ã„ã‚‹ã‚¿ã‚°ãƒªã‚¹ãƒˆ
  */
 public class JoinTagList {
 
 	final private Map<String, JoinTag> mTags = new HashMap<String, JoinTag>();
 
 	/**
-	 * API level
-	 * 
-	 * ƒ^ƒO‚ªƒŠƒXƒg‚ÉŠÜ‚Ü‚ê‚Ä‚¢‚ê‚Îtrue‚ğ•Ô‚·
-	 * 
+	 * API level 1
+	 *
+     * æŒ‡å®šã—ãŸã‚¿ã‚°ãŒãƒªã‚¹ãƒˆã«å«ã¾ã‚Œã¦ã„ãŸã‚‰trueã‚’è¿”ã™
+	 *
 	 * @param name
 	 * @return
 	 */
@@ -26,9 +26,9 @@ public class JoinTagList {
 	
 	/**
 	 * API level 1
-	 * 
-	 * ƒ^ƒO‚ğ’Ç‰Á‚·‚é
-	 * 
+	 *
+     * æŒ‡å®šã—ãŸã‚¿ã‚°ã‚’ã‚¿ã‚°ãƒªã‚¹ãƒˆã«è¿½åŠ ã™ã‚‹
+	 *
 	 * @param name
 	 */
 	public void add(String name) {
@@ -37,9 +37,9 @@ public class JoinTagList {
 	
 	/**
 	 * API level 1
-	 * 
-	 * ƒ^ƒO‚ğæ“¾‚·‚é
-	 * 
+	 *
+     * æŒ‡å®šã—ãŸã‚¿ã‚°æ–‡å­—åˆ—ã‹ã‚‰ {@link JoinTag} ã‚’å–å¾—ã™ã‚‹
+	 *
 	 * @param name
 	 * @return
 	 */
@@ -50,19 +50,19 @@ public class JoinTagList {
 	/**
 	 * API level 1
 	 * 
-	 * ƒ^ƒO‚ğ {@link Map<String, JoinTag>} ‚Å•Ô‚·
+	 * {@link Map<String, JoinTag>} å½¢å¼ã®ã‚¿ã‚°ä¸€è¦§ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’è¿”ã™
 	 * 
 	 * @return
 	 */
-	public Map<String, JoinTag> getAll() {
+	public Map<String, JoinTag> toMap() {
 		return mTags;
 	}
 	
 	/**
 	 * API level 1
-	 * 
-	 * ƒ^ƒO‚ÉÅIXV“ú‚ğƒZƒbƒg‚·‚é
-	 * 
+	 *
+     * æŒ‡å®šã—ãŸã‚¿ã‚°æ–‡å­—åˆ—ã®æœ€çµ‚æ›´æ–°æ—¥æ™‚ã‚’ã‚»ãƒƒãƒˆã™ã‚‹
+	 *
 	 * @param name
 	 * @param millsecond
 	 */
