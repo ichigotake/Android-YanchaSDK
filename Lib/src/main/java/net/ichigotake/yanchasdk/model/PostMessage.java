@@ -8,8 +8,8 @@ import java.util.List;
  * 投稿された発言
  */
 public class PostMessage {
-	
-	final private String defaultProfileImageUrl = "/static/img/nobody.png";
+    
+    final private String defaultProfileImageUrl = "/static/img/nobody.png";
 
     final private int mMessageId;
 
@@ -75,11 +75,11 @@ public class PostMessage {
     }
 
     /**
-	 * API level 1
-	 *
+     * API level 1
+     *
      * {@link PostMessage} をビルドする
-	 */
-	public static class PostMessageBuilder {
+     */
+    public static class PostMessageBuilder {
 
         private int mMessageId;
 
