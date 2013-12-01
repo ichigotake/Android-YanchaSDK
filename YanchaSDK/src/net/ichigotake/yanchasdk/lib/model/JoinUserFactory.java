@@ -3,7 +3,6 @@ package net.ichigotake.yanchasdk.lib.model;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -21,15 +20,23 @@ public class JoinUserFactory {
      * @return
      * @throws JSONException
      */
-    public static List<String> createNicknameList(String response) throws JSONException {
-        JSONObject json = new JSONObject(response);
-        List<String> nicknames = new ArrayList<String>();
+    public JoinUsers fromNicknameEvent(String response) throws JSONException {
+        final JSONObject json = new JSONObject(response);
+        final JoinUsers users = new JoinUsers();
+        final Iterator<String> iter = json.keys();
 
-        Iterator<String> iter = json.keys();
         while (iter.hasNext()) {
-            nicknames.add(iter.next().toString());
+            final JSONObject userJson = json.getJSONObject(iter.next());
+
+            final JoinUser user = new JoinUser.JoinUserBuilder()
+                    .setNickname(userJson.getString("nickname"))
+                    .setProfileUrl(userJson.getString("profile_url"))
+                    .setProfileImageUrl(userJson.getString("profile_image_url"))
+                    .build();
+
+            users.add(user);
         }
 
-        return nicknames;
+        return users;
     }
 }
