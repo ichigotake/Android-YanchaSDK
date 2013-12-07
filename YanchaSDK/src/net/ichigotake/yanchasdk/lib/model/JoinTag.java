@@ -3,50 +3,50 @@ package net.ichigotake.yanchasdk.lib.model;
 import java.util.Date;
 
 /**
- * yancha‚Åw“Ç‚µ‚Ä‚¢‚éƒ^ƒOî•ñ
+ * yanchaï¿½Åwï¿½Ç‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½^ï¿½Oï¿½ï¿½ï¿½
  */
 public class JoinTag {
 
-	final private String mName;
-	
-	private Date mLastUpdatedTime;
-	
-	public JoinTag(String name) {
-		mName = name;
-		mLastUpdatedTime = new Date(0);
-	}
-	
-	/**
-	 * API level 1
-	 * 
-	 * ƒ^ƒO‚Ì–¼‘O‚ğ•Ô‚·
-	 * 
-	 * @return
-	 */
-	public String getName() {
-		return mName;
-	}
-	
-	/**
-	 * API level 1
-	 * 
-	 * ƒ^ƒO‚ÌÅIXV“ú‚ğ•Ô‚·
-	 * 
-	 * @return
-	 */
-	public Date getLastUpdatedTime() {
-		return mLastUpdatedTime;
-	}
-	
-	/**
-	 * API level 1
-	 * 
-	 * ƒ^ƒO‚ÌÅIXV“ú‚ğƒZƒbƒg‚·‚é
-	 * 
-	 * @param createdAtMillisecconds
-	 */
-	public void setLastUpdatedTime(long createdAtMillisecconds) {
-		mLastUpdatedTime = new Date(createdAtMillisecconds);
-	}
-	
+    final private String mName;
+    
+    private Date mLastUpdatedTime;
+    
+    public JoinTag(String name) {
+        mName = name;
+        mLastUpdatedTime = new Date(0);
+    }
+    
+    /**
+     * API level 1
+     * 
+     * ï¿½^ï¿½Oï¿½Ì–ï¿½ï¿½Oï¿½ï¿½Ô‚ï¿½
+     * 
+     * @return
+     */
+    public String getName() {
+        return mName;
+    }
+    
+    /**
+     * API level 1
+     * 
+     * ï¿½^ï¿½Oï¿½ÌÅIï¿½Xï¿½Vï¿½ï¿½ï¿½Ô‚ï¿½
+     * 
+     * @return
+     */
+    public Date getLastUpdatedTime() {
+        return mLastUpdatedTime;
+    }
+    
+    /**
+     * API level 1
+     * 
+     * ï¿½^ï¿½Oï¿½ÌÅIï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½Zï¿½bï¿½gï¿½ï¿½ï¿½ï¿½
+     * 
+     * @param createdAtMillisecconds
+     */
+    public void setLastUpdatedTime(long createdAtMillisecconds) {
+        mLastUpdatedTime = new Date(createdAtMillisecconds);
+    }
+    
 }
