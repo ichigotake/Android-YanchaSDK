@@ -27,16 +27,23 @@ public class JoinUserFactory {
 
         while (iter.hasNext()) {
             final JSONObject userJson = json.getJSONObject(iter.next());
-
-            final JoinUser user = new JoinUser.JoinUserBuilder()
-                    .setNickname(userJson.getString("nickname"))
-                    .setProfileUrl(userJson.getString("profile_url"))
-                    .setProfileImageUrl(userJson.getString("profile_image_url"))
-                    .build();
-
-            users.add(user);
+            users.add(build(userJson));
         }
 
         return users;
+    }
+
+    public ChatUser fromTokenLoginEvent(String response)throws JSONException {
+        JSONObject userJson = new JSONObject(response).getJSONObject("user_data");
+        return build(userJson);
+    }
+
+    private ChatUser build(JSONObject json) throws JSONException {
+        return new JoinUser.JoinUserBuilder()
+                .setNickname(json.getString("nickname"))
+                .setProfileUrl(json.getString("profile_url"))
+                .setProfileImageUrl(json.getString("profile_image_url"))
+                .build();
+
     }
 }

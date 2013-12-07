@@ -9,13 +9,13 @@ import java.util.ArrayList;
  */
 public class JoinUsers {
 
-    final private List<JoinUser> mUsers;
+    final private List<ChatUser> mUsers;
 
     public JoinUsers() {
-        mUsers = new ArrayList<JoinUser>();
+        mUsers = new ArrayList<ChatUser>();
     }
 
-    public void add(JoinUser user) {
+    public void add(ChatUser user) {
         mUsers.add(user);
     }
 
@@ -27,7 +27,18 @@ public class JoinUsers {
         Collections.sort(mUsers, new NicknameComparator());
     }
 
-    public List<JoinUser> toList() {
+    public JoinUsers excludeMyself(ChatUser own) {
+        JoinUsers users = new JoinUsers();
+        String ownNickname = own.getNickname();
+        for (ChatUser user : toList()) {
+            if (! ownNickname.equals(user.getNickname())) {
+                users.add(user);
+            }
+        }
+        return users;
+    }
+
+    public List<ChatUser> toList() {
         return mUsers;
     }
 

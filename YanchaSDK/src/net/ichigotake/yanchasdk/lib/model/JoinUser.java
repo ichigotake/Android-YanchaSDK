@@ -3,7 +3,7 @@ package net.ichigotake.yanchasdk.lib.model;
 /**
  * チャットに参加しているユーザー
  */
-public class JoinUser {
+public class JoinUser implements ChatUser {
 
     final private String mNickname;
     final private String mProfileImageUrl;
@@ -20,7 +20,7 @@ public class JoinUser {
         private String mProfileUrl;
         private String mProfileImageUrl;
 
-        public JoinUser build() {
+        public ChatUser build() {
             return new JoinUser(this);
         }
 
@@ -41,14 +41,17 @@ public class JoinUser {
 
     }
 
+    @Override
     public String getProfileUrl() {
         return mProfileUrl;
     }
 
+    @Override
     public String getProfileImageUrl() {
         return mProfileImageUrl;
     }
 
+    @Override
     public String getNickname() {
         return mNickname;
     }
