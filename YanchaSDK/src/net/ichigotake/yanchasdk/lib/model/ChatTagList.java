@@ -8,9 +8,9 @@ import java.util.Map;
  * 
  * チャットで購読しているタグリスト
  */
-public class JoinTagList {
+public class ChatTagList {
 
-    final private Map<String, JoinTag> mTags = new HashMap<String, JoinTag>();
+    final private Map<String, ChatTag> mTags = new HashMap<String, ChatTag>();
 
     /**
      * API level 1
@@ -32,29 +32,29 @@ public class JoinTagList {
      * @param name
      */
     public void add(String name) {
-        mTags.put(name, new JoinTag(name));
+        mTags.put(name, new ChatTag(name));
     }
     
     /**
      * API level 1
      *
-     * 指定したタグ文字列から {@link JoinTag} を取得する
+     * 指定したタグ文字列から {@link ChatTag} を取得する
      *
      * @param name
      * @return
      */
-    public JoinTag get(String name) {
+    public ChatTag get(String name) {
         return mTags.get(name);
     }
     
     /**
      * API level 1
      * 
-     * {@link Map<String, JoinTag>} 形式のタグ一覧オブジェクトを返す
+     * {@link Map<String,  ChatTag >} 形式のタグ一覧オブジェクトを返す
      * 
      * @return
      */
-    public Map<String, JoinTag> toMap() {
+    public Map<String, ChatTag> toMap() {
         return mTags;
     }
     

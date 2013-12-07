@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * ログインしているユーザー情報を生成するクラス
  */
-public class JoinUserFactory {
+public class ChatUserFactory {
 
     /**
      * API level 1
@@ -20,9 +20,9 @@ public class JoinUserFactory {
      * @return
      * @throws JSONException
      */
-    public JoinUsers fromNicknameEvent(String response) throws JSONException {
+    public ChatUsers fromNicknameEvent(String response) throws JSONException {
         final JSONObject json = new JSONObject(response);
-        final JoinUsers users = new JoinUsers();
+        final ChatUsers users = new ChatUsers();
         final Iterator<String> iter = json.keys();
 
         while (iter.hasNext()) {
@@ -39,7 +39,7 @@ public class JoinUserFactory {
     }
 
     private ChatUser build(JSONObject json) throws JSONException {
-        return new JoinUser.JoinUserBuilder()
+        return new ChatJoinUser.JoinUserBuilder()
                 .setNickname(json.getString("nickname"))
                 .setProfileUrl(json.getString("profile_url"))
                 .setProfileImageUrl(json.getString("profile_image_url"))

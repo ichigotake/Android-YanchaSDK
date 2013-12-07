@@ -5,13 +5,13 @@ import java.util.Date;
 /**
  * yancha�ōw�ǂ��Ă���^�O���
  */
-public class JoinTag {
+public class ChatTag {
 
     final private String mName;
     
     private Date mLastUpdatedTime;
     
-    public JoinTag(String name) {
+    public ChatTag(String name) {
         mName = name;
         mLastUpdatedTime = new Date(0);
     }

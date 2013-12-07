@@ -9,33 +9,33 @@ import org.json.JSONObject;
 /**
  * API level 1
  * 
- * {@link PostMessage} を生成する
+ * {@link ChatMessage} を生成する
  */
-public class PostMessageFactory {
+public class ChatMessageFactory {
 
     /**
      * API level 1
      * 
-     * JSON文字列から {@link PostMessage} を生成する
+     * JSON文字列から {@link ChatMessage} を生成する
      * 
      * @param jsonString
      * @return
      * @throws JSONException
      */
-    public static PostMessage create(String jsonString) throws JSONException {
+    public static ChatMessage create(String jsonString) throws JSONException {
         return create(new JSONObject(jsonString));
     }
     
     /**
      * API level 1
      * 
-     * {@link JSONObject} から {@link PostMessage} を生成する
+     * {@link JSONObject} から {@link ChatMessage} を生成する
      * 
      * @param json
      * @return
      * @throws JSONException
      */
-    public static PostMessage create(JSONObject json) throws JSONException {
+    public static ChatMessage create(JSONObject json) throws JSONException {
         ArrayList<String> tags = new ArrayList<String>();
         JSONArray argsTags = json.getJSONArray("tags");
         int tagLength = argsTags.length();
@@ -44,7 +44,7 @@ public class PostMessageFactory {
             tags.add(tag);
         }
 
-        PostMessage message = new PostMessage.PostMessageBuilder()
+        ChatMessage message = new ChatMessage.PostMessageBuilder()
             .setId(json.getInt("id"))
             .setProfileImageUrl(json.getString("profile_image_url"))
             .setCreatedTime(json.getLong("created_at_ms"))

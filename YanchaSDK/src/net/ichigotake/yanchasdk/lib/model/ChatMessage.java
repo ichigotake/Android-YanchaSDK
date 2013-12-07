@@ -7,7 +7,7 @@ import java.util.List;
  *
  * 投稿された発言
  */
-public class PostMessage {
+public class ChatMessage {
 
     final private String defaultProfileImageUrl = "/static/img/nobody.png";
 
@@ -27,7 +27,7 @@ public class PostMessage {
 
     final private List<String> mTags;
 
-    private PostMessage(PostMessageBuilder builder) {
+    private ChatMessage(PostMessageBuilder builder) {
         mMessageId = builder.mMessageId;
         mPlusplus = builder.mPlusplus;
         mCreatedTime = builder.mCreatedTime;
@@ -77,7 +77,7 @@ public class PostMessage {
     /**
      * API level 1
      *
-     * {@link PostMessage} をビルドする
+     * {@link ChatMessage} をビルドする
      */
     public static class PostMessageBuilder {
 
@@ -97,8 +97,8 @@ public class PostMessage {
 
         private List<String> mTags;
 
-        public PostMessage build() {
-            return new PostMessage(this);
+        public ChatMessage build() {
+            return new ChatMessage(this);
         }
 
         public PostMessageBuilder setCreatedTime(long createdTime) {

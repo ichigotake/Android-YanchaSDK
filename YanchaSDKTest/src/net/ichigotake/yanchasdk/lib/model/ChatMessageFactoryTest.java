@@ -1,15 +1,13 @@
 package net.ichigotake.yanchasdk.lib.model;
 
 import junit.framework.TestCase;
-import net.ichigotake.yanchasdk.lib.model.PostMessageBuilder.PostMessage;
-import net.ichigotake.yanchasdk.lib.model.PostMessageFactory;
 
 import org.json.JSONException;
 
 /**
- * Testing for {@link PostMessageFactory}
+ * Testing for {@link ChatMessageFactory}
  */
-public class PostMessageFactoryTest extends TestCase {
+public class ChatMessageFactoryTest extends TestCase {
 
     private String getJSONString() {
         return "{\"tags\":[\"PUBLIC\"],\"plusplus\":2,\"id\":\"167741\",\"text\":\"����ف[ #PUBLIC\",\"profile_url\":\"https:\\/\\/twitter.com\\/#!\\/ichigotake\",\"nickname\":\"ichigotake\",\"user_key\":\"twitter:150657117\",\"is_message_log\":false,\"created_at_ms\":138271774824573,\"profile_image_url\":\"http:\\/\\/a0.twimg.com\\/profile_images\\/3778759794\\/cf55ba56ebf29483039dbe73b63a1452_normal.png\"}";
@@ -17,7 +15,7 @@ public class PostMessageFactoryTest extends TestCase {
     
     public void testCreateFromJSONString() {
         try {
-            PostMessage message = PostMessageFactory.create(getJSONString());
+            ChatMessage message = ChatMessageFactory.create(getJSONString());
             assertEquals(message.getMessage(), "����ف[ #PUBLIC");
             assertEquals(message.getPlusplus(), 2);
             assertEquals(message.getId(), 167741);
@@ -32,7 +30,7 @@ public class PostMessageFactoryTest extends TestCase {
     
     public void testThrowJSONExceptionByInvalidJSONString() {
         try {
-            PostMessageFactory.create("invalid json string");
+            ChatMessageFactory.create("invalid json string");
         } catch (JSONException e) {
             assertTrue(true);
             return ;

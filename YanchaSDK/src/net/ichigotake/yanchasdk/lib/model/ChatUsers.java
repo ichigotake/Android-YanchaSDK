@@ -7,11 +7,11 @@ import java.util.ArrayList;
 /**
  * チャットに参加しているユーザーの一覧
  */
-public class JoinUsers {
+public class ChatUsers {
 
     final private List<ChatUser> mUsers;
 
-    public JoinUsers() {
+    public ChatUsers() {
         mUsers = new ArrayList<ChatUser>();
     }
 
@@ -27,8 +27,8 @@ public class JoinUsers {
         Collections.sort(mUsers, new NicknameComparator());
     }
 
-    public JoinUsers excludeMyself(ChatUser own) {
-        JoinUsers users = new JoinUsers();
+    public ChatUsers excludeMyself(ChatUser own) {
+        ChatUsers users = new ChatUsers();
         String ownNickname = own.getNickname();
         for (ChatUser user : toList()) {
             if (! ownNickname.equals(user.getNickname())) {

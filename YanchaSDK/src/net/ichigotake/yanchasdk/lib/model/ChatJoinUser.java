@@ -3,13 +3,13 @@ package net.ichigotake.yanchasdk.lib.model;
 /**
  * チャットに参加しているユーザー
  */
-public class JoinUser implements ChatUser {
+public class ChatJoinUser implements ChatUser {
 
     final private String mNickname;
     final private String mProfileImageUrl;
     final private String mProfileUrl;
 
-    private JoinUser(JoinUserBuilder builder) {
+    private ChatJoinUser(JoinUserBuilder builder) {
         mNickname = builder.mNickname;
         mProfileUrl = builder.mProfileUrl;
         mProfileImageUrl = builder.mProfileImageUrl;
@@ -21,7 +21,7 @@ public class JoinUser implements ChatUser {
         private String mProfileImageUrl;
 
         public ChatUser build() {
-            return new JoinUser(this);
+            return new ChatJoinUser(this);
         }
 
         public JoinUserBuilder setNickname(String nickname) {
