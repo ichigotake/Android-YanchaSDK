@@ -1,4 +1,4 @@
-package net.ichigotake.yanchasdk.lib.model;
+package net.ichigotake.yancha.sdk.model;
 
 import org.json.JSONException;
 import org.json.JSONObject;

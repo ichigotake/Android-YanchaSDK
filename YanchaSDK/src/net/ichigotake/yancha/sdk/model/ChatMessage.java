@@ -1,4 +1,4 @@
-package net.ichigotake.yanchasdk.lib.model;
+package net.ichigotake.yancha.sdk.model;
 
 import java.util.List;
 
