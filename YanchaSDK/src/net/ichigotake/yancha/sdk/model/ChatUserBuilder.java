@@ -6,9 +6,13 @@ package net.ichigotake.yancha.sdk.model;
  * {@link ChatUser} を構築する
  */
 public class ChatUserBuilder {
-    private String mNickname;
+    final private String mNickname;
     private String mProfileImageUrl;
     private String mProfileUrl;
+
+    public ChatUserBuilder(String nickname) {
+        mNickname = nickname;
+    }
 
     public ChatUser build() {
         return new CharUserImpl();
@@ -38,11 +42,6 @@ public class ChatUserBuilder {
         public String toString() {
             return getNickname();
         }
-    }
-
-    public ChatUserBuilder setNickname(String nickname) {
-        mNickname = nickname;
-        return this;
     }
 
     public ChatUserBuilder setProfileUrl(String profile) {
