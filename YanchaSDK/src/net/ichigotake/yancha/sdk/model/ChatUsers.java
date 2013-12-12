@@ -42,4 +42,7 @@ public class ChatUsers {
         return mUsers;
     }
 
+    public ChatUser get(int location) {
+        return mUsers.get(location);
+    }
 }

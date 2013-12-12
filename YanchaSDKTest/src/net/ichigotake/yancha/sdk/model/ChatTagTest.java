@@ -2,8 +2,6 @@ package net.ichigotake.yancha.sdk.model;
 
 import junit.framework.TestCase;
 
-import java.util.Date;
-
 public class ChatTagTest extends TestCase {
 
     private String getTag() {
@@ -11,8 +9,7 @@ public class ChatTagTest extends TestCase {
     }
     
     public void testAddTag() {
-        ChatTag tag = new ChatTag(getTag());
+        ChatTag tag = new ChatTagBuilder(getTag()).build();
         assertEquals(getTag(), tag.getName());
-        assertEquals(tag.getLastUpdatedTime().getTime(), new Date(0).getTime());
     }
 }
