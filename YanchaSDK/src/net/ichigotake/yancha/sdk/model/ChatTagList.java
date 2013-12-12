@@ -32,7 +32,7 @@ public class ChatTagList {
      * @param name
      */
     public void add(String name) {
-        mTags.put(name, new ChatTag(name));
+        mTags.put(name, new ChatTagBuilder(name).build());
     }
     
     /**
@@ -58,15 +58,4 @@ public class ChatTagList {
         return mTags;
     }
     
-    /**
-     * API level 1
-     *
-     * 指定したタグ文字列の最終更新日時をセットする
-     *
-     * @param name
-     * @param millsecond
-     */
-    public void setLastUpdatedTime(String name, long millsecond) {
-        mTags.get(name).setLastUpdatedTime(millsecond);
-    }
 }
