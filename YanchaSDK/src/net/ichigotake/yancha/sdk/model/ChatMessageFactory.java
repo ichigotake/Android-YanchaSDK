@@ -1,10 +1,10 @@
 package net.ichigotake.yancha.sdk.model;
 
-import java.util.ArrayList;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 /**
  * API level 1
@@ -44,7 +44,7 @@ public class ChatMessageFactory {
             tags.add(tag);
         }
 
-        ChatMessage message = new ChatMessage.PostMessageBuilder()
+        ChatMessage message = new ChatMessageBuilder()
             .setId(json.getInt("id"))
             .setProfileImageUrl(json.getString("profile_image_url"))
             .setCreatedTime(json.getLong("created_at_ms"))

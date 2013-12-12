@@ -7,139 +7,22 @@ import java.util.List;
  *
  * 投稿された発言
  */
-public class ChatMessage {
+public interface ChatMessage {
 
-    final private String defaultProfileImageUrl = "/static/img/nobody.png";
+    public long getCreatedTime();
 
-    final private int mMessageId;
+    public String getNickname();
 
-    final private int mPlusplus;
+    public String getProfileImageUrl();
 
-    final private long mCreatedTime;
+    public String getUserKey();
 
-    final private String mUserKey;
+    public int getPlusplus();
 
-    final private String mNickname;
+    public String getMessage();
 
-    final private String mProfileImageUrl;
+    public List<String> getTags();
 
-    final private String mMessage;
+    public int getId();
 
-    final private List<String> mTags;
-
-    private ChatMessage(PostMessageBuilder builder) {
-        mMessageId = builder.mMessageId;
-        mPlusplus = builder.mPlusplus;
-        mCreatedTime = builder.mCreatedTime;
-        mUserKey = builder.mUserKey;
-        mNickname = builder.mNickname;
-        mProfileImageUrl = builder.mProfileImageUrl;
-        mMessage = builder.mMessage;
-        mTags = builder.mTags;
-    }
-
-    public long getCreatedTime() {
-        return mCreatedTime;
-    }
-
-    public String getNickname() {
-        return mNickname;
-    }
-
-    public String getProfileImageUrl() {
-        return mProfileImageUrl;
-    }
-
-    public String getDefaultProfileImageUrl() {
-        return defaultProfileImageUrl;
-    }
-
-    public String getUserKey() {
-        return mUserKey;
-    }
-
-    public int getPlusplus() {
-        return mPlusplus;
-    }
-
-    public String getMessage() {
-        return mMessage;
-    }
-
-    public List<String> getTags() {
-        return mTags;
-    }
-
-    public int getId() {
-        return mMessageId;
-    }
-
-    /**
-     * API level 1
-     *
-     * {@link ChatMessage} をビルドする
-     */
-    public static class PostMessageBuilder {
-
-        private int mMessageId;
-
-        private int mPlusplus;
-
-        private long mCreatedTime;
-
-        private String mUserKey;
-
-        private String mNickname;
-
-        private String mProfileImageUrl;
-
-        private String mMessage;
-
-        private List<String> mTags;
-
-        public ChatMessage build() {
-            return new ChatMessage(this);
-        }
-
-        public PostMessageBuilder setCreatedTime(long createdTime) {
-            this.mCreatedTime = createdTime;
-            return this;
-        }
-
-        public PostMessageBuilder setNickname(String nickname) {
-            this.mNickname = nickname;
-            return this;
-        }
-
-        public PostMessageBuilder setProfileImageUrl(String profileImageUrl) {
-            this.mProfileImageUrl = profileImageUrl;
-            return this;
-        }
-
-        public PostMessageBuilder setUserKey(String userKey) {
-            this.mUserKey = userKey;
-            return this;
-        }
-
-        public PostMessageBuilder setPlusplus(int plusplus) {
-            this.mPlusplus = plusplus;
-            return this;
-        }
-
-        public PostMessageBuilder setMessage(String message) {
-            this.mMessage = message;
-            return this;
-        }
-
-        public PostMessageBuilder setTags(List<String> tags) {
-            this.mTags = tags;
-            return this;
-        }
-
-        public PostMessageBuilder setId(int id) {
-            this.mMessageId = id;
-            return this;
-        }
-
-    }
 }
