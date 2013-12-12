@@ -1,4 +1,4 @@
-# yanchaSDK
+# yanchaSDK [![Build Status](https://travis-ci.org/ichigotake/Android-YanchaSDK.png)](http://travis-ci.org/ichigotake/Android-YanchaSDK)
 
 ## 概要
 
