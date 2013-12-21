@@ -20,5 +20,10 @@ public class ChatTagBuilder {
         public String getName() {
             return mName;
         }
+
+        @Override
+        public String getFormattedName() {
+            return "#" + getName();
+        }
     }
 }

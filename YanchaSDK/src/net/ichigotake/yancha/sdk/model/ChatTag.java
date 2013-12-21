@@ -6,4 +6,6 @@ package net.ichigotake.yancha.sdk.model;
 public interface ChatTag {
 
     public String getName();
+
+    public String getFormattedName();
 }
