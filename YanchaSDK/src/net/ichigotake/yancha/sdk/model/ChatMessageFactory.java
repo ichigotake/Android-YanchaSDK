@@ -47,7 +47,7 @@ public class ChatMessageFactory {
         ChatMessage message = new ChatMessageBuilder()
             .setId(json.getInt("id"))
             .setProfileImageUrl(json.getString("profile_image_url"))
-            .setCreatedTime(json.getLong("created_at_ms"))
+            .setCreatedTime(json.getLong("created_at_ms") / 100)
             .setMessage(json.getString("text"))
             .setNickname(json.getString("nickname"))
             .setPlusplus(json.getInt("plusplus"))
