@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# テスト結果ページを閲覧するためのWEBサーバ
+# script/run-test実行後にこのスクリプトを起動する
+#
+# 現状あるバグとして、常時サーバを立ち上げておいた状態にしておくと、
+# テスト実行後にアクセスするとサーバエラーを起こす
+# 
+# todo: HTTPサーバを常時立ち上げておけるようにする
+# todo: OSXのMarvericks以外では動作確認していない
+
+cd $report_dir
+python -m SimpleHTTPServer
