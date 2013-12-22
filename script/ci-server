@@ -9,5 +9,9 @@
 # todo: HTTPサーバを常時立ち上げておけるようにする
 # todo: OSXのMarvericks以外では動作確認していない
 
+script_dir=$(cd $(dirname $0); pwd)
+cd "$script_dir/.."
+report_dir="`pwd`/sdk/build/reports/instrumentTests/connected"
 cd $report_dir
+
 python -m SimpleHTTPServer
