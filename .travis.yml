@@ -1,0 +1,9 @@
+language: java
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -qq --force-yes libgd2-xpm ia32-libs ia32-libs-multiarch
+  - wget http://dl.google.com/android/android-sdk_r21.1-linux.tgz
+  - tar -zxf android-sdk_r21.1-linux.tgz
+  - echo "sdk.dir=`pwd`/android-sdk-linux/sdk" > local.properties;
+script:
+  - sh script/run-test
