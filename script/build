@@ -1,0 +1,8 @@
+#!/bin/sh
+
+script_dir=$(cd $(dirname $0); pwd)
+cd "$script_dir/.."
+./gradlew build
+
+cp ./sdk/build/bundles/release/classes.jar ./output/yanchasdk-0.0.0.jar
+
