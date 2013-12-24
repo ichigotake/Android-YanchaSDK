@@ -1,6 +1,8 @@
 package net.ichigotake.yancha.sdk.model;
 
-public interface ChatUser {
+import java.io.Serializable;
+
+public interface ChatUser extends Serializable {
 
     String getProfileUrl();
 

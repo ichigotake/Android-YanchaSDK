@@ -1,5 +1,6 @@
 package net.ichigotake.yancha.sdk.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  *
  * 投稿された発言
  */
-public interface ChatMessage {
+public interface ChatMessage extends Serializable {
 
     public long getCreatedTime();
 
