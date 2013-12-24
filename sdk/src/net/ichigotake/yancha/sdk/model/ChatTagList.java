@@ -1,5 +1,6 @@
 package net.ichigotake.yancha.sdk.model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +9,7 @@ import java.util.Map;
  * 
  * チャットで購読しているタグリスト
  */
-public class ChatTagList {
+public class ChatTagList implements Serializable {
 
     final private Map<String, ChatTag> mTags = new HashMap<String, ChatTag>();
 

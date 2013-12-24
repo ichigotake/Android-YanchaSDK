@@ -1,5 +1,6 @@
 package net.ichigotake.yancha.sdk.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  *
  * {@link ChatMessage} を構築する
  */
-public class ChatMessageBuilder {
+public class ChatMessageBuilder implements Serializable {
     private int mMessageId;
     private int mPlusplus;
     private long mCreatedTime;

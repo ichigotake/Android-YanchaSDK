@@ -1,5 +1,6 @@
 package net.ichigotake.yancha.sdk.model;
 
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 /**
  * チャットに参加しているユーザーの一覧
  */
-public class ChatUsers {
+public class ChatUsers implements Serializable {
 
     final private List<ChatUser> mUsers;
 

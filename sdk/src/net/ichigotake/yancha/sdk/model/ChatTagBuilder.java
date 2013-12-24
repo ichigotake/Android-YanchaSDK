@@ -1,9 +1,11 @@
 package net.ichigotake.yancha.sdk.model;
 
+import java.io.Serializable;
+
 /**
  * {@link ChatTag} を構築する
  */
-public class ChatTagBuilder {
+public class ChatTagBuilder implements Serializable {
     final private String mName;
 
     public ChatTagBuilder(String name) {

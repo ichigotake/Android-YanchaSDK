@@ -1,11 +1,13 @@
 package net.ichigotake.yancha.sdk.model;
 
+import java.io.Serializable;
+
 /**
  * API level 1
  *
  * {@link ChatUser} を構築する
  */
-public class ChatUserBuilder {
+public class ChatUserBuilder implements Serializable {
     final private String mNickname;
     private String mProfileImageUrl;
     private String mProfileUrl;
