@@ -59,11 +59,11 @@ public class ChatUsersTest extends TestCase {
             users.add(build(nickname));
         }
 
-        users.sort();
+        ChatUsers sortedUsers = users.sort();
 
         List<String> expectNicknames = getSortedNicknames();
         for (int i=0, count=users.count(); i<count; i++) {
-            String get = users.get(i).getNickname();
+            String get = sortedUsers.get(i).getNickname();
             String expect = expectNicknames.get(i);
             assertEquals(get, expect);
         }

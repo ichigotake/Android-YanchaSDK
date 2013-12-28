@@ -9,7 +9,7 @@ import java.util.Map;
  * 
  * チャットで購読しているタグリスト
  */
-public class ChatTagList implements Serializable {
+public class ChatTags implements Serializable {
 
     final private Map<String, ChatTag> mTags = new HashMap<String, ChatTag>();
 
@@ -51,7 +51,7 @@ public class ChatTagList implements Serializable {
     /**
      * API level 1
      * 
-     * {@link Map<String,  ChatTag >} 形式のタグ一覧オブジェクトを返す
+     * {@link Map<String, ChatTag>} 形式のタグ一覧オブジェクトを返す
      * 
      * @return
      */

@@ -18,27 +18,6 @@ android {
         testPackageName "net.ichigotake.yancha.sdk.tests"
     }
 
-    sourceSets {
-        main {
-            assets.srcDirs       = ['assets']
-            res.srcDirs          = ['res']
-            aidl.srcDirs         = ['src']
-            resources.srcDirs    = ['src']
-            renderscript.srcDirs = ['src']
-            java.srcDirs         = ['src']
-            manifest.srcFile 'AndroidManifest.xml'
-
-        }
-
-        instrumentTest {
-            assets.srcDirs    = ["tests/assets"]
-            res.srcDirs       = ["tests/res"]
-            resources.srcDirs = ["tests/src"]
-            java.srcDirs      = ["tests/src"]
-        }
-
-    }
-
 }
 
 tasks.withType(Test) {
