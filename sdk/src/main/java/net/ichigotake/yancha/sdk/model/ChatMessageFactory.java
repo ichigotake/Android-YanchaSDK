@@ -13,6 +13,19 @@ import java.util.ArrayList;
  */
 public class ChatMessageFactory {
 
+    public ChatMessages createList(JSONArray response) throws JSONException {
+        ChatMessages messages = new ChatMessages();
+        int length = response.length();
+        if (length > 0) {
+            ChatMessageFactory factory = new ChatMessageFactory();
+            for (int i=0; i<length; i++) {
+                String string = response.get(i).toString();
+                messages.add(factory.create(string));
+            }
+        }
+
+        return messages;
+    }
     /**
      * API level 1
      * 
@@ -22,7 +35,7 @@ public class ChatMessageFactory {
      * @return
      * @throws JSONException
      */
-    public static ChatMessage create(String jsonString) throws JSONException {
+    public ChatMessage create(String jsonString) throws JSONException {
         return create(new JSONObject(jsonString));
     }
     
@@ -35,7 +48,7 @@ public class ChatMessageFactory {
      * @return
      * @throws JSONException
      */
-    public static ChatMessage create(JSONObject json) throws JSONException {
+    public ChatMessage create(JSONObject json) throws JSONException {
         ArrayList<String> tags = new ArrayList<String>();
         JSONArray argsTags = json.getJSONArray("tags");
         int tagLength = argsTags.length();

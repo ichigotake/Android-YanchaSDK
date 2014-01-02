@@ -15,7 +15,7 @@ public class ChatMessageFactoryTest extends TestCase {
     
     public void testCreateFromJSONString() {
         try {
-            ChatMessage message = ChatMessageFactory.create(getJSONString());
+            ChatMessage message = new ChatMessageFactory().create(getJSONString());
             assertEquals(message.getMessage(), "����ف[ #PUBLIC");
             assertEquals(message.getPlusplus(), 2);
             assertEquals(message.getId(), 167741);
@@ -30,7 +30,7 @@ public class ChatMessageFactoryTest extends TestCase {
     
     public void testThrowJSONExceptionByInvalidJSONString() {
         try {
-            ChatMessageFactory.create("invalid json string");
+            new ChatMessageFactory().create("invalid json string");
         } catch (JSONException e) {
             assertTrue(true);
             return ;
