@@ -16,6 +16,21 @@ Androidアプリに[yancha](https://github.com/uzulla/yancha)クライアント�
 
 ダウンロード時間を減らすための処置でもあります
 
+## ダウンロード
+
+以下のようにGradleの設定を記述する
+
+```
+repositories {
+        maven { url 'https://raw.github.com/ichigotake/Android-YanchaSDK/develop/repository' }
+    }
+
+    dependencies {
+        compile 'net.ichigotake.yancha:YanchaSDK:0.0.1'
+    }
+}
+```
+
 ## ライセンス
 
 [Apache Lisence 2.0](http://www.apache.org/licenses/LICENSE-2.0)

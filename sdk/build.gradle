@@ -15,13 +15,23 @@ android {
     buildToolsVersion = 19
 
     defaultConfig {
+        versionCode 1
+        versionName "0.0.1"
         testPackageName "net.ichigotake.yancha.sdk.tests"
     }
 
 }
 
-tasks.withType(Test) {
-    testLogging {
-        events 'started', 'passed'
+apply plugin: 'maven'
+
+def deployTo = new File(rootDir, "repository")
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file://${deployTo}")
+            pom.version = '0.0.1'
+            pom.groupId = 'net.ichigotake.yancha'
+            pom.artifactId = 'YanchaSDK'
+        }
     }
 }

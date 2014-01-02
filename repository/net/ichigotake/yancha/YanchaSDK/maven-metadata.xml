@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>net.ichigotake.yancha</groupId>
+  <artifactId>YanchaSDK</artifactId>
+  <version>0.0.1</version>
+  <versioning>
+    <versions>
+      <version>0.0.1</version>
+    </versions>
+    <lastUpdated>20140102042345</lastUpdated>
+  </versioning>
+</metadata>
