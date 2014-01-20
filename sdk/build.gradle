@@ -1,22 +1,14 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:0.7.0+'
-    }
-}
-
 apply plugin: 'android-library'
+
+def version = readVersion(file("VERSION"))
 
 android {
     compileSdkVersion 19
     buildToolsVersion = 19
 
     defaultConfig {
-        versionCode 1
-        versionName "0.0.1"
+        versionCode version.toVersionCode()
+        versionName version.toVersionName()
         testPackageName "net.ichigotake.yancha.sdk.tests"
     }
 
@@ -29,7 +21,7 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: "file://${deployTo}")
-            pom.version = '0.0.1'
+            pom.version = version.toVersionName()
             pom.groupId = 'net.ichigotake.yancha'
             pom.artifactId = 'yanchasdk'
         }
