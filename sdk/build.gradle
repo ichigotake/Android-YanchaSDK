@@ -9,7 +9,6 @@ android {
     defaultConfig {
         versionCode version.toVersionCode()
         versionName version.toVersionName()
-        testPackageName "net.ichigotake.yancha.sdk.tests"
     }
 
 }
