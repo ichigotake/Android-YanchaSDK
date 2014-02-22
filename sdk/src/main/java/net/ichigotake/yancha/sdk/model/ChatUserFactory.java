@@ -11,6 +11,17 @@ import java.util.List;
  */
 public class ChatUserFactory {
 
+    private static ChatUserFactory sInstance;
+
+    private ChatUserFactory() {}
+
+    public static ChatUserFactory getInstance() {
+        if (sInstance == null) {
+            sInstance = new ChatUserFactory();
+        }
+        return sInstance;
+    }
+
     /**
      * API level 1
      *
@@ -20,25 +31,26 @@ public class ChatUserFactory {
      * @return
      * @throws JSONException
      */
-    public ChatUsers fromNicknameEvent(String response) throws JSONException {
+    public static ChatUsers fromNicknameEvent(String response) throws JSONException {
         final JSONObject json = new JSONObject(response);
         final ChatUsers users = new ChatUsers();
         final Iterator<String> iter = json.keys();
 
+        final ChatUserFactory factory = getInstance();
         while (iter.hasNext()) {
             final JSONObject userJson = json.getJSONObject(iter.next());
-            users.add(build(userJson));
+            users.add(factory.build(userJson));
         }
 
         return users;
     }
 
-    public ChatUser fromTokenLoginEvent(String response)throws JSONException {
+    public static ChatUser fromTokenLoginEvent(String response)throws JSONException {
         JSONObject userJson = new JSONObject(response).getJSONObject("user_data");
-        return build(userJson);
+        return getInstance().build(userJson);
     }
 
-    private ChatUser build(JSONObject json) throws JSONException {
+    public ChatUser build(JSONObject json) throws JSONException {
         return new ChatUserBuilder(json.getString("nickname"))
                 .setProfileUrl(json.getString("profile_url"))
                 .setProfileImageUrl(json.getString("profile_image_url"))

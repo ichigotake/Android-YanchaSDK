@@ -12,12 +12,23 @@ import java.util.ArrayList;
  * {@link ChatMessage} を生成する
  */
 public class ChatMessageFactory {
+    
+    private static ChatMessageFactory sInstance;
+            
+    private ChatMessageFactory() {}
+    
+    public static ChatMessageFactory getInstance() {
+        if (sInstance == null) {
+            sInstance = new ChatMessageFactory();
+        }
+        return sInstance;
+    }
 
-    public ChatMessages createList(JSONArray response) throws JSONException {
+    public static ChatMessages createList(JSONArray response) throws JSONException {
         ChatMessages messages = new ChatMessages();
         int length = response.length();
         if (length > 0) {
-            ChatMessageFactory factory = new ChatMessageFactory();
+            ChatMessageFactory factory = getInstance();
             for (int i=0; i<length; i++) {
                 String string = response.get(i).toString();
                 messages.add(factory.create(string));
@@ -35,8 +46,8 @@ public class ChatMessageFactory {
      * @return
      * @throws JSONException
      */
-    public ChatMessage create(String jsonString) throws JSONException {
-        return create(new JSONObject(jsonString));
+    public static ChatMessage create(String jsonString) throws JSONException {
+        return getInstance().create(new JSONObject(jsonString));
     }
     
     /**
