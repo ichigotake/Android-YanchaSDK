@@ -2,10 +2,11 @@
 
 script_dir=$(cd $(dirname $0); pwd)
 cd "$script_dir/.."
-./gradlew connectedCheck
 
 if [ $(uname) == 'Darwin' ]
 then
   report="$script_dir/../sdk/build/reports/instrumentTests/connected/index.html"
   open "$report"
+else
+  echo 'sorry, MacOSX support only...'
 fi

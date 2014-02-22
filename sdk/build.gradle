@@ -25,4 +25,10 @@ uploadArchives {
             pom.artifactId = 'yanchasdk'
         }
     }
+
+    doLast {
+        def jarName = "yanchasdk-${version.toVersionName()}.jar"
+        def buildJarPath = "${project.projectDir.getAbsolutePath()}/build/bundles/release/classes.jar"
+        "cp ${buildJarPath} ./output/${jarName}".execute()
+    }
 }
