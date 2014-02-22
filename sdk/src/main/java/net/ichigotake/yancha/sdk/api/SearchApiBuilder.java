@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.text.TextUtils;
 
 import java.util.Collection;
+import java.util.Locale;
 
 public class SearchApiBuilder {
 
@@ -12,6 +13,11 @@ public class SearchApiBuilder {
         RSS,
         TEXT,
         ;
+
+        @Override
+        public String toString() {
+            return name().toLowerCase(Locale.JAPAN);
+        }
     }
 
     public static enum Order {
@@ -51,7 +57,7 @@ public class SearchApiBuilder {
     }
 
     public SearchApiBuilder setFormat(Format format) {
-        setFormat(format.toString().toLowerCase());
+        setFormat(format.toString());
         return this;
     }
 
