@@ -20,13 +20,13 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: "file://${deployTo}")
-            pom.packaging = '.jar'
             pom.version = version.toVersionName()
             pom.groupId = 'net.ichigotake.yancha'
             pom.artifactId = 'yanchasdk'
         }
     }
 
+    //TODO: SDKの開発が落ち着いたらGithubのリリース機能に置き換える
     doLast {
         def jarName = "yanchasdk-${version.toVersionName()}.jar"
         def buildJarPath = "${project.projectDir.getAbsolutePath()}/build/bundles/release/classes.jar"
