@@ -20,6 +20,7 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository(url: "file://${deployTo}")
+            pom.packaging = '.jar'
             pom.version = version.toVersionName()
             pom.groupId = 'net.ichigotake.yancha'
             pom.artifactId = 'yanchasdk'
