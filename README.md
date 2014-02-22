@@ -18,10 +18,12 @@ repositories {
     }
 
     dependencies {
-        compile 'net.ichigotake.yancha:YanchaSDK:0.0.1'
+        compile 'net.ichigotake.yancha:YanchaSDK:0.0.3'
     }
 }
 ```
+
+もしくは [jarファイル](./output) を利用してください
 
 ## ライセンス
 
