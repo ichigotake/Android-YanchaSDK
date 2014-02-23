@@ -18,7 +18,7 @@ repositories {
     }
 
     dependencies {
-        compile 'net.ichigotake.yancha:YanchaSDK:0.0.3'
+        compile 'net.ichigotake.yancha:yancha-sdk:0.0.4'
     }
 }
 ```

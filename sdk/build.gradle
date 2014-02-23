@@ -22,7 +22,7 @@ uploadArchives {
             repository(url: "file://${deployTo}")
             pom.version = version.toVersionName()
             pom.groupId = 'net.ichigotake.yancha'
-            pom.artifactId = 'yanchasdk'
+            pom.artifactId = 'yancha-sdk'
         }
     }
 
