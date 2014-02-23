@@ -2,7 +2,7 @@ package net.ichigotake.yancha.sdk.api;
 
 import android.net.Uri;
 
-public class PostApiBuilder {
+public class PostApiBuilder implements ApiBuilder {
 
     final private Uri.Builder mBuilder;
 
@@ -17,6 +17,7 @@ public class PostApiBuilder {
                 .appendQueryParameter("message", message);
     }
 
+    @Override
     public Uri.Builder get() {
         return mBuilder;
     }

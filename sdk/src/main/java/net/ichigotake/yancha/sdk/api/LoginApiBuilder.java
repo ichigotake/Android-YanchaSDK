@@ -2,7 +2,7 @@ package net.ichigotake.yancha.sdk.api;
 
 import android.net.Uri;
 
-public class LoginApiBuilder {
+public class LoginApiBuilder implements ApiBuilder {
 
     final private Uri.Builder mBuilder;
 
@@ -31,4 +31,8 @@ public class LoginApiBuilder {
         return mBuilder.toString();
     }
 
+    @Override
+    public Uri.Builder get() {
+        return mBuilder;
+    }
 }

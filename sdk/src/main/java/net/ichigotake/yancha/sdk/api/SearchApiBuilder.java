@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import java.util.Collection;
 import java.util.Locale;
 
-public class SearchApiBuilder {
+public class SearchApiBuilder implements ApiBuilder {
 
     public static enum Format {
         JSON,
@@ -121,6 +121,7 @@ public class SearchApiBuilder {
         return this;
     }
 
+    @Override
     public Uri.Builder get() {
         return mBuilder;
     }
