@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="35.25" y="373.0">net.ichigotake.yancha.sdk.model.ChatTags</node>
+    <node x="0.0" y="248.0">net.ichigotake.yancha.sdk.model.ChatTagBuilder</node>
+    <node x="34.5" y="124.0">net.ichigotake.yancha.sdk.model.ChatTagBuilder.ChatTagImpl</node>
+    <node x="85.625" y="0.0">net.ichigotake.yancha.sdk.model.ChatTag</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="net.ichigotake.yancha.sdk.model.ChatTagBuilder.ChatTagImpl" target="net.ichigotake.yancha.sdk.model.ChatTag">
+      <point x="0.0" y="-37.0" />
+      <point x="109.0" y="99.0" />
+      <point x="122.875" y="99.0" />
+      <point x="-37.25" y="37.0" />
+    </edge>
+    <edge source="net.ichigotake.yancha.sdk.model.ChatTags" target="net.ichigotake.yancha.sdk.model.ChatTag">
+      <point x="66.75" y="-59.0" />
+      <point x="235.5" y="348.0" />
+      <point x="228.5" y="348.0" />
+      <point x="228.5" y="99.0" />
+      <point x="197.375" y="99.0" />
+      <point x="37.25" y="37.0" />
+    </edge>
+    <edge source="net.ichigotake.yancha.sdk.model.ChatTagBuilder.ChatTagImpl" target="net.ichigotake.yancha.sdk.model.ChatTagBuilder">
+      <point x="37.25" y="37.0" />
+      <point x="146.25" y="223.0" />
+      <point x="163.5" y="223.0" />
+      <point x="54.5" y="-37.5" />
+    </edge>
+    <edge source="net.ichigotake.yancha.sdk.model.ChatTagBuilder" target="net.ichigotake.yancha.sdk.model.ChatTagBuilder.ChatTagImpl">
+      <point x="-54.5" y="-37.5" />
+      <point x="54.5" y="223.0" />
+      <point x="71.75" y="223.0" />
+      <point x="-37.25" y="37.0" />
+    </edge>
+    <edge source="net.ichigotake.yancha.sdk.model.ChatTags" target="net.ichigotake.yancha.sdk.model.ChatTagBuilder">
+      <point x="-66.75" y="-59.0" />
+      <point x="102.0" y="348.0" />
+      <point x="109.0" y="348.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="151.5" y="245.5" />
+  <SelectedNodes>
+    <node>net.ichigotake.yancha.sdk.model.ChatTag</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>packageLocal</VISIBILITY>
+</Diagram>
+

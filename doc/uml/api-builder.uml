@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1095.0" y="223.5">net.ichigotake.yancha.sdk.api.TagApiBuilder</node>
+    <node x="240.5" y="525.5">net.ichigotake.yancha.sdk.api.SearchApiBuilder.Format</node>
+    <node x="471.0" y="223.5">net.ichigotake.yancha.sdk.api.UserApiBuilder</node>
+    <node x="218.0" y="634.0">net.ichigotake.yancha.sdk.api.OrderFieldBuilder</node>
+    <node x="47.5" y="514.0">net.ichigotake.yancha.sdk.api.SearchApiBuilder.Order</node>
+    <node x="827.5" y="0.0">net.ichigotake.yancha.sdk.api.ApiBuilder</node>
+    <node x="1328.0" y="223.5">net.ichigotake.yancha.sdk.api.PostApiBuilder</node>
+    <node x="709.0" y="201.0">net.ichigotake.yancha.sdk.api.LoginApiBuilder</node>
+    <node x="654.7352941176471" y="446.5537084398977">net.ichigotake.yancha.sdk.api.Endpoint</node>
+    <node x="629.7352941176471" y="548.5537084398977">net.ichigotake.yancha.sdk.api.BasicEndpoint</node>
+    <node x="0.0" y="102.0">net.ichigotake.yancha.sdk.api.SearchApiBuilder</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="net.ichigotake.yancha.sdk.api.LoginApiBuilder" target="net.ichigotake.yancha.sdk.api.ApiBuilder">
+      <point x="0.0" y="-82.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="net.ichigotake.yancha.sdk.api.BasicEndpoint" target="net.ichigotake.yancha.sdk.api.Endpoint">
+      <point x="0.0" y="-37.5" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="net.ichigotake.yancha.sdk.api.SearchApiBuilder.Format" target="net.ichigotake.yancha.sdk.api.SearchApiBuilder">
+      <point x="0.0" y="-26.0" />
+      <point x="317.0" y="489.0" />
+      <point x="338.25" y="489.0" />
+      <point x="112.75" y="181.0" />
+    </edge>
+    <edge source="net.ichigotake.yancha.sdk.api.PostApiBuilder" target="net.ichigotake.yancha.sdk.api.ApiBuilder">
+      <point x="0.0" y="-59.5" />
+      <point x="1477.5" y="72.0" />
+      <point x="943.6" y="72.0" />
+      <point x="51.60000000000002" y="26.0" />
+    </edge>
+    <edge source="net.ichigotake.yancha.sdk.api.TagApiBuilder" target="net.ichigotake.yancha.sdk.api.ApiBuilder">
+      <point x="0.0" y="-59.5" />
+      <point x="1201.5" y="82.0" />
+      <point x="917.8" y="82.0" />
+      <point x="25.799999999999955" y="26.0" />
+    </edge>
+    <edge source="net.ichigotake.yancha.sdk.api.SearchApiBuilder.Order" target="net.ichigotake.yancha.sdk.api.SearchApiBuilder">
+      <point x="0.0" y="-37.5" />
+      <point x="134.0" y="489.0" />
+      <point x="112.75" y="489.0" />
+      <point x="-112.75" y="181.0" />
+    </edge>
+    <edge source="net.ichigotake.yancha.sdk.api.UserApiBuilder" target="net.ichigotake.yancha.sdk.api.ApiBuilder">
+      <point x="0.0" y="-59.5" />
+      <point x="580.0" y="82.0" />
+      <point x="866.2" y="82.0" />
+      <point x="-25.799999999999955" y="26.0" />
+    </edge>
+    <edge source="net.ichigotake.yancha.sdk.api.SearchApiBuilder" target="net.ichigotake.yancha.sdk.api.ApiBuilder">
+      <point x="0.0" y="-181.0" />
+      <point x="225.5" y="72.0" />
+      <point x="840.4" y="72.0" />
+      <point x="-51.60000000000002" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.474802671523983" x="813.5" y="405.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>packageLocal</VISIBILITY>
+</Diagram>
+
