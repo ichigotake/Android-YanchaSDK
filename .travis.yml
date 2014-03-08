@@ -17,4 +17,4 @@ install: ./gradlew
 before_script:
     - wait_for_emulator
 script:
-    - ./gradlew clean connectInstrumentTest
+    - ./gradlew clean connectedAndroidTest

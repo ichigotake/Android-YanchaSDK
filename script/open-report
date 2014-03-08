@@ -5,7 +5,7 @@ cd "$script_dir/.."
 
 if [ $(uname) == 'Darwin' ]
 then
-  report="$script_dir/../sdk/build/reports/instrumentTests/connected/index.html"
+  report="$script_dir/../sdk/build/reports/androidTests/connected/index.html"
   open "$report"
 else
   echo 'sorry, MacOSX support only...'
