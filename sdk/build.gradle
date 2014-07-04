@@ -1,35 +1,14 @@
-apply plugin: 'android-library'
+apply plugin: 'com.android.library'
 
 def version = readVersion(file("VERSION"))
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion = 19
+    compileSdkVersion 20
+    buildToolsVersion = "20.0.0"
 
     defaultConfig {
         versionCode version.toVersionCode()
         versionName version.toVersionName()
     }
 
-}
-
-apply plugin: 'maven'
-
-def deployTo = new File(rootDir, "repository")
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: "file://${deployTo}")
-            pom.version = version.toVersionName()
-            pom.groupId = 'net.ichigotake.yancha'
-            pom.artifactId = 'yancha-sdk'
-        }
-    }
-
-    //TODO: SDKの開発が落ち着いたらGithubのリリース機能に置き換える
-    doLast {
-        def jarName = "yanchasdk-${version.toVersionName()}.jar"
-        def buildJarPath = "${project.projectDir.getAbsolutePath()}/build/bundles/release/classes.jar"
-        "cp ${buildJarPath} ./output/${jarName}".execute()
-    }
 }
