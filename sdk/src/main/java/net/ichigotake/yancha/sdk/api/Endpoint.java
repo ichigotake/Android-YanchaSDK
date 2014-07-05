@@ -1,6 +1,10 @@
 package net.ichigotake.yancha.sdk.api;
 
+import android.net.Uri;
+
 public interface Endpoint {
 
-    String getPath();
+    HttpMethod getMethod();
+
+    Uri getPath();
 }
