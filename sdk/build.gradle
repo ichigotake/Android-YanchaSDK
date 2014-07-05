@@ -1,14 +1,12 @@
 apply plugin: 'com.android.library'
 
-def version = readVersion(file("VERSION"))
-
 android {
     compileSdkVersion 20
     buildToolsVersion = "20.0.0"
 
     defaultConfig {
-        versionCode version.toVersionCode()
-        versionName version.toVersionName()
+        versionCode 1000000
+        versionName "0.1.0"
     }
 
 }
