@@ -1,5 +1,7 @@
 package net.ichigotake.yancha.sdk.chat;
 
+import android.os.Parcelable;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -8,7 +10,7 @@ import java.util.List;
  *
  * 投稿された発言
  */
-public interface ChatMessage extends Serializable {
+public interface ChatMessage extends Parcelable {
 
     public long getCreatedTime();
 

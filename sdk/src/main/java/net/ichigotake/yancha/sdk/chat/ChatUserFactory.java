@@ -3,6 +3,7 @@ package net.ichigotake.yancha.sdk.chat;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -22,9 +23,9 @@ public class ChatUserFactory {
     /**
      * SocketIOの "nicknames" イベントのレスポンスからニックネームの {@link List<String>}を生成する
      */
-    public static ChatUsers fromNicknameEvent(String response) throws JSONException {
+    public static List<ChatUser> fromNicknameEvent(String response) throws JSONException {
         final JSONObject json = new JSONObject(response);
-        final ChatUsers users = new ChatUsers();
+        final List<ChatUser> users = new ArrayList<ChatUser>();
         final Iterator<String> iter = json.keys();
 
         final ChatUserFactory factory = getInstance();

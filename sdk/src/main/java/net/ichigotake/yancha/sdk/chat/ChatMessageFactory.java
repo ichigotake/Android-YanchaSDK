@@ -5,6 +5,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * API level 1
@@ -24,14 +25,13 @@ public class ChatMessageFactory {
         return sInstance;
     }
 
-    public static ChatMessages createList(JSONArray response) throws JSONException {
-        ChatMessages messages = new ChatMessages();
+    public static List<ChatMessage> createList(JSONArray response) throws JSONException {
+        List<ChatMessage> messages = new ArrayList<ChatMessage>();
         int length = response.length();
         if (length > 0) {
-            ChatMessageFactory factory = getInstance();
             for (int i=0; i<length; i++) {
                 String string = response.get(i).toString();
-                messages.add(factory.create(string));
+                messages.add(create(string));
             }
         }
 
@@ -47,7 +47,7 @@ public class ChatMessageFactory {
      * @throws JSONException
      */
     public static ChatMessage create(String jsonString) throws JSONException {
-        return getInstance().create(new JSONObject(jsonString));
+        return create(new JSONObject(jsonString));
     }
     
     /**
@@ -59,7 +59,7 @@ public class ChatMessageFactory {
      * @return
      * @throws JSONException
      */
-    public ChatMessage create(JSONObject json) throws JSONException {
+    public static ChatMessage create(JSONObject json) throws JSONException {
         ArrayList<String> tags = new ArrayList<String>();
         JSONArray argsTags = json.getJSONArray("tags");
         int tagLength = argsTags.length();
@@ -68,7 +68,7 @@ public class ChatMessageFactory {
             tags.add(tag);
         }
 
-        ChatMessage message = new ChatMessageBuilder()
+        return new ChatMessageBuilder()
             .setId(json.getInt("id"))
             .setProfileImageUrl(json.getString("profile_image_url"))
             .setCreatedTime(json.getLong("created_at_ms") / 100)
@@ -78,7 +78,5 @@ public class ChatMessageFactory {
             .setTags(tags)
             .setUserKey(json.getString("user_key"))
             .build();
-            
-        return message;
     }
 }
