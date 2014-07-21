@@ -6,9 +6,11 @@ public class ChatUserBuilder implements Serializable {
     final private String mNickname;
     private String mProfileImageUrl;
     private String mProfileUrl;
+    private String mUserKey;
 
-    public ChatUserBuilder(String nickname) {
+    public ChatUserBuilder(String nickname, String userKey) {
         mNickname = nickname;
+        mUserKey = userKey;
     }
 
     public ChatUser build() {
@@ -30,6 +32,11 @@ public class ChatUserBuilder implements Serializable {
         @Override
         public String getNickname() {
             return mNickname;
+        }
+
+        @Override
+        public String getUserKey() {
+            return mUserKey;
         }
 
         @Override

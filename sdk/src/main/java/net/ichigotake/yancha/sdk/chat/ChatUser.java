@@ -11,4 +11,6 @@ public interface ChatUser extends Serializable {
     String getProfileImageUrl();
 
     String getNickname();
+
+    String getUserKey();
 }
