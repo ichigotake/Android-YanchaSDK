@@ -1,8 +1,8 @@
 package net.ichigotake.yancha.sdk.chat;
 
-import java.io.Serializable;
+import android.os.Parcelable;
 
-public interface ChatUser extends Serializable {
+public interface ChatUser extends Parcelable {
 
     public static final String DEFAULT_PROFILE_IMAGE_PATH = "/static/img/nobody.png";
 
