@@ -1,15 +1,11 @@
-apply from: 'gradle/gradle-android-utils/build.gradle'
-
 buildscript {
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.9.0'
+        classpath 'com.android.tools.build:gradle:0.12.0'
     }
 }
-
-initSdkDir()
 
 allprojects {
     tasks.withType(JavaCompile) {
