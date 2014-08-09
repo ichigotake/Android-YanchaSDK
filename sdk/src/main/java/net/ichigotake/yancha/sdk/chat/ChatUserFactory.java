@@ -43,10 +43,12 @@ public class ChatUserFactory {
     }
 
     public ChatUser build(JSONObject json) throws JSONException {
-        return new ChatUserBuilder(json.getString("nickname"), json.getString("user_key"))
+        ChatUserBuilder builder = new ChatUserBuilder(json.getString("nickname"))
                 .setProfileUrl(json.getString("profile_url"))
-                .setProfileImageUrl(json.getString("profile_image_url"))
-                .build();
-
+                .setProfileImageUrl(json.getString("profile_image_url"));
+        if (json.has("user_key")) {
+            builder.setUserKey(json.getString("user_key"));
+        }
+        return builder.build();
     }
 }
