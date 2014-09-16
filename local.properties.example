@@ -1,2 +1,0 @@
-# IDE等が自動生成するので、手動で `local.properties` に変更を加える必要は基本的にはない
-sdk.dir=/Applications/Android\ Studio.app/sdk
